@@ -37,22 +37,20 @@ nav.addEventListener('click', function(e) {
 
 // project button
 const projectToggle = document.querySelectorAll('.projectCarouselToggle>p')
-console.log(projectToggle);
+const projects = document.querySelectorAll('.projectCarouselCard:nth-child(n+5)')
+const seeMore = document.querySelector('.seeMore')
+
 projectToggle.forEach(function(element) {
-    console.log('for each', element);
     element.addEventListener('click', function(element) {
-        console.log(element)
         element.target.classList.toggle('displayNone')
         element.target.nextElementSibling?.classList.toggle('displayNone')
         element.target.previousElementSibling?.classList.toggle('displayNone')
         element.target.parentElement.nextElementSibling.classList.toggle('displayFlex')
-
-        const projects = document.querySelectorAll('.projectCarouselCard:nth-child(n+5)')
-
-        console.log(projects);
+        // this add display block to the projects that were hidden
         projects.forEach(function(element) {
-            console.log(element);
             element.classList.toggle('displayBlock')
         })
+        // remove the "Swipe to see more"
+        seeMore.classList.toggle('displayNone')
     })
 })
