@@ -884,9 +884,6 @@ section > div {
   display: none;
 }
 
-#contact {
-  text-align: center;
-}
 #contact h2 {
   padding: 4rem 0;
 }
@@ -911,6 +908,7 @@ section > div {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  text-align: center;
 }
 .contactOptions > div {
   border: 1px solid rgba(255, 255, 255, 0.6509803922);

@@ -280,7 +280,6 @@ section > div {
 }
 
 #contact {
-    text-align: center;
     h2 {
         padding: 4rem 0;
     }
@@ -300,6 +299,7 @@ section > div {
 .contactOptions {
     display: flex;
     justify-content: space-between;
+    text-align: center;
     > div {
         border: 1px solid #ffffffa6;
         background-color: #383838;
