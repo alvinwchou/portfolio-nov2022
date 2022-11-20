@@ -15,10 +15,10 @@
     <header>
         <nav class="navBar">
             <!-- home button -->
-            <a href="#intro">ch<span>ALV</span>ou</a>
+            <a href="#intro" class="logo">ch<span>ALV</span>ou</a>
             <!-- nav -->
-            <nav>
-                <div id="underline"></div>
+            <nav class="mainNav">
+                <div id="navUnderline"></div>
                 <a href="#about">About</a>
                 <a href="#skills">Skills</a>
                 <a href="#projects">Project</a>
@@ -26,14 +26,35 @@
             </nav>
             <!-- social media -->
             <div class="socials">
-                <a href="https://www.linkedin.com/in/alvinwchou/">
+                <a href="https://docs.google.com/document/d/1VUTsrl-DCnDC3bDb8DtA0tVsvnVgi8yJ8YQAVmp9eDE/edit?usp=sharing" target="_blank">
+                    <i class="fa-regular fa-file" aria-hidden="true"></i>
+                    <span class="sr-only">Link to Resume</span>
+                </a>
+                <a href="https://www.linkedin.com/in/alvinwchou/" target="_blank">
                     <i class="devicon-linkedin-plain" aria-hidden="true"></i>
                     <span class="sr-only">Link to LinkedIn</span>
                 </a>
-                <a href="https://github.com/alvinwchou">
+                <a href="https://github.com/alvinwchou" target="_blank">
                     <i class="devicon-github-original" aria-hidden="true"></i>
                     <span class="sr-only">Link to GitHub</span>
                 </a>
+            </div>
+            <!-- menu burger -->
+            <input type="checkbox" id="openSideOutNav">
+            <label class="menuBars" for="openSideOutNav">
+                <i class="fa-solid fa-bars" aria-hidden="true"></i>
+                <span class="sr-only">Slide out menu</span>
+            </label>
+            <!-- slideout nav -->
+            <div class="slideOutNav">
+                <div class="slideOutNavContainer">
+                    <nav class="mainNav">
+                        <a href="#about">About</a>
+                        <a href="#skills">Skills</a>
+                        <a href="#projects">Project</a>
+                        <a href="#contact">Contact</a>
+                    </nav>
+                </div>
             </div>
         </nav>
     </header>

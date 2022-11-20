@@ -348,6 +348,9 @@ h4 {
   font-size: 0.8rem;
   margin-bottom: 1rem;
 }
+#projects .projectCarouselToggle p {
+  margin: 0;
+}
 
 @-webkit-keyframes draw {
   to {
@@ -450,20 +453,37 @@ h4 {
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
-.navBar nav {
+.navBar input[type=checkbox] {
+  opacity: 0;
+  position: absolute;
+}
+
+.mainNav {
   border: 1px solid rgba(255, 255, 255, 0.6509803922);
   border-radius: 5px;
   padding: 1rem;
   position: relative;
 }
-.navBar nav:hover {
+.mainNav:hover {
   border: 1px solid #ffffff;
 }
-.navBar nav a {
+.mainNav a {
   padding: 0 1rem;
 }
 
-#underline {
+.menuBars {
+  display: none;
+}
+
+header {
+  position: relative;
+}
+
+.slideOutNav {
+  display: none;
+}
+
+#navUnderline {
   height: 3px;
   width: 0;
   background-color: #f3ca2f;
@@ -472,6 +492,10 @@ h4 {
   bottom: 1rem;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
+}
+
+.socials a {
+  margin: 0 0.3rem;
 }
 
 section {
@@ -626,6 +650,7 @@ section > div {
 .carousel {
   -webkit-perspective: 250px;
           perspective: 250px;
+  width: 1px;
   height: 200px;
   margin: 0 auto;
   position: relative;
@@ -744,6 +769,9 @@ section > div {
   cursor: pointer;
   z-index: 5;
 }
+.projectCarouselToggle p {
+  margin: 0;
+}
 
 .projectCarouselCard {
   -ms-flex-negative: 0;
@@ -794,11 +822,10 @@ section > div {
 .projectCarouselCardContent .imageContainer {
   border-radius: 15px;
   overflow: hidden;
+  width: 100%;
 }
 .projectCarouselCardContent .textContainer {
-  width: 400px;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
+  width: max(50%, 400px);
 }
 
 .projectCarouselCard:nth-child(even) .projectCarouselCardContent {
@@ -812,8 +839,11 @@ section > div {
   display: none;
 }
 
+#contact {
+  text-align: center;
+}
 #contact h2 {
-  padding-bottom: 4rem;
+  padding: 4rem 0;
 }
 #contact i {
   font-size: 3rem;
@@ -866,4 +896,97 @@ section > div {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
   display: flex !important;
+}
+
+@media (max-width: 1000px) {
+  .navBar {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "socials logo menuBars" "slideOutNav slideOutNav slideOutNav";
+  }
+  .navBar .logo {
+    grid-area: logo;
+    text-align: center;
+  }
+  .navBar .socials {
+    grid-area: socials;
+  }
+  .navBar .menuBars {
+    display: block;
+    grid-area: menuBars;
+  }
+  .navBar .menuBars i {
+    float: right;
+    cursor: pointer;
+  }
+  .navBar .slideOutNav {
+    grid-area: slideOutNav;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: absolute;
+    z-index: -1;
+  }
+  .navBar input[type=checkbox]:checked ~ .slideOutNav {
+    position: relative;
+  }
+  .navBar input[type=checkbox]:checked ~ .slideOutNav .mainNav {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+  .navBar input[type=checkbox]:checked ~ .slideOutNav .mainNav a {
+    opacity: 1;
+  }
+  .navBar .mainNav {
+    -webkit-transform: translateY(-3rem);
+            transform: translateY(-3rem);
+    opacity: 0;
+    -webkit-transition: opacity 0.5s ease, -webkit-transform 0.5s ease;
+    transition: opacity 0.5s ease, -webkit-transform 0.5s ease;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    transition: transform 0.5s ease, opacity 0.5s ease, -webkit-transform 0.5s ease;
+  }
+  .navBar .mainNav a {
+    opacity: 0;
+    -webkit-transition: opacity 0.5s 0.4s ease;
+    transition: opacity 0.5s 0.4s ease;
+  }
+  .navBar > .mainNav {
+    display: none;
+  }
+  #intro .contentContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .projectCarouselCardContent {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+  }
+  .projectCarouselCardContent > div {
+    margin: 0.5rem;
+  }
+  .projectCarouselCardContent .imageContainer {
+    width: 50%;
+  }
+  .contactOptions {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .contactOptions > div {
+    width: 80%;
+    margin: 2rem;
+  }
 }

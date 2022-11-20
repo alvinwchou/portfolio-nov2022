@@ -25,8 +25,8 @@ function isElementInViewport(element) {
 }
 
 // nav underline
-const underline = document.querySelector('#underline')
-const nav = document.querySelector('.navBar nav')
+const underline = document.querySelector('#navUnderline')
+const nav = document.querySelector('.mainNav')
 
 nav.addEventListener('click', function(e) {
     if (e.target.nodeName == 'A') {

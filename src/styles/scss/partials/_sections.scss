@@ -119,6 +119,7 @@ section > div {
 
 .carousel {
     perspective: 250px;
+    width: 1px;
     height: 200px;
     margin: 0 auto;
     position: relative;
@@ -202,6 +203,9 @@ section > div {
     transform: translateX(50%);
     cursor: pointer;
     z-index: 5;
+    p {
+        margin: 0;
+    }
 }
 
 .projectCarouselCard {
@@ -240,10 +244,10 @@ section > div {
     .imageContainer {
         border-radius: 15px;
         overflow: hidden;
+        width: 100%;
     }
     .textContainer {
-        width: 400px;
-        flex-shrink: 0;
+        width: max(50%, 400px);
     }
 }
 
@@ -256,8 +260,9 @@ section > div {
 }
 
 #contact {
+    text-align: center;
     h2 {
-        padding-bottom: 4rem;
+        padding: 4rem 0;
     }
     i {
         font-size: 3rem;
