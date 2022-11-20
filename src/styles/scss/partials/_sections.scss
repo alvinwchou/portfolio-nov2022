@@ -215,6 +215,7 @@ section > div {
     transform: translateX(-50%);
     overflow-x: hidden;
     display: flex;
+    white-space: nowrap;
     p {
         animation: scroll 5s infinite linear;
     }

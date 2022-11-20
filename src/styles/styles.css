@@ -801,6 +801,7 @@ section > div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  white-space: nowrap;
 }
 .seeMore p {
   -webkit-animation: scroll 5s infinite linear;
@@ -1007,6 +1008,11 @@ section > div {
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
+  }
+  #intro p {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
   }
   .projectCarouselCardContent {
     -webkit-box-orient: vertical !important;
