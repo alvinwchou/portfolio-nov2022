@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: #ffffff;
+}
+
+a {
+    color: #ffffff;
+}
+
+.navBar a {
+    letter-spacing: -0.025rem;
+}
+
+.navBar > a {
+    font-size: 2rem;
+    &:hover {
+        color: #ffffffa6;
+        span {
+            color: #f3ca2f;
+        }
+    }
+}
+
+.navBar nav a {
+    color: #ffffffa6;
+    &:hover {
+        color: #ffffff;
+    }
+}
+
+.navBar i {
+    font-size: 1.5rem;
+    &:hover {
+        color: #f3ca2f;
+    }
+}
+
+.yellow {
+    color: #f3ca2f;
+}
+
+h1,
+h2,
+h3 {
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 4rem;
+    letter-spacing: -0.05rem;
+}
+
+h3 {
+    font-size: 0.7rem;
+    letter-spacing: 0.1rem;
+}
+
+h4 {
+    font-size: 2rem;
+}
+
+#about p {
+    line-height: 2rem;
+}
+
+#skills p {
+    font-size: 0.5rem;
+}
+
+#projects p {
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+}

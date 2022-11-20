@@ -1,0 +1,41 @@
+@keyframes draw {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes carouselEffect {
+    from {
+        transform: rotateY(360deg) translateZ(130px) rotateY(-360deg);
+        z-index: 10;
+        opacity: 1;
+    }
+
+    50% {
+        z-index: -10;
+    }
+
+    to {
+        transform: rotateY(0deg) translateZ(130px) rotateY(0deg);
+        z-index: 10;
+        opacity: 1;
+    }
+}
+
+@keyframes blinking {
+    from {
+        color: #ffffffa6;
+        border: 1px solid #ffffffa6;
+    }
+
+    50% {
+        color: #ffffff;
+        border: 1px solid #ffffff;
+        box-shadow: 0px 0px 25px 0px #ffffffa6;
+    }
+
+    to {
+        color: #ffffffa6;
+        border: 1px solid #ffffffa6;
+    }
+}

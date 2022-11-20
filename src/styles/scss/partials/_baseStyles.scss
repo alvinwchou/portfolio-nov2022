@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 125%;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #151516;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+.button {
+    color: #ffffffa6;
+    margin-bottom: 1rem;
+    display: inline-block;
+    border: 1px solid #ffffffa6;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    margin: 0 1.5rem 1rem 1.5rem;
+    transition: all 0.3s ease-out;
+    &:hover {
+        color: #ffffff;
+        border: 1px solid #ffffff;
+    }
+}
