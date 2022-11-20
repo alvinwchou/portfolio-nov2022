@@ -39,3 +39,12 @@
         border: 1px solid #ffffffa6;
     }
 }
+
+@keyframes scroll {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}

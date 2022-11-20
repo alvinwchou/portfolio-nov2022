@@ -36,12 +36,12 @@ section > div {
         align-items: center;
     }
     .textContainer {
-        width: max(700px, 50%);
+        // width: max(700px, 50%);
     }
     .imageContainer {
-        width: 350px;
+        width: min(80%, 350px);
         flex-shrink: 0;
-        margin: 0 auto;
+        margin: 0 auto 0.5rem auto;
         border-radius: 50%;
         border: 3px solid #f3ca2f;
         overflow: hidden;
@@ -208,6 +208,18 @@ section > div {
     }
 }
 
+.seeMore {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow-x: hidden;
+    display: flex;
+    p {
+        animation: scroll 5s infinite linear;
+    }
+}
+
 .projectCarouselCard {
     flex-shrink: 0;
     width: 100%;
@@ -246,8 +258,15 @@ section > div {
         overflow: hidden;
         width: 100%;
     }
+    img {
+        transition: all 0.5s ease-out;
+        transform: scale(1);
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
     .textContainer {
-        width: max(50%, 400px);
+        width: min(90%, 600px);
     }
 }
 

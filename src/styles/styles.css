@@ -287,13 +287,13 @@ a {
   letter-spacing: -0.025rem;
 }
 
-.navBar > a {
-  font-size: 2rem;
+.logo {
+  font-size: clamp(1rem, 0.6667rem + 1.5238vw, 2rem);
 }
-.navBar > a:hover {
+.logo:hover {
   color: rgba(255, 255, 255, 0.6509803922);
 }
-.navBar > a:hover span {
+.logo:hover span {
   color: #f3ca2f;
 }
 
@@ -305,7 +305,7 @@ a {
 }
 
 .navBar i {
-  font-size: 1.5rem;
+  font-size: clamp(0.75rem, 0.5rem + 1.1429vw, 1.5rem);
 }
 .navBar i:hover {
   color: #f3ca2f;
@@ -323,7 +323,7 @@ h3 {
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: clamp(1.5rem, 0.6667rem + 3.8095vw, 4rem);
   letter-spacing: -0.05rem;
 }
 
@@ -429,6 +429,26 @@ h4 {
     border: 1px solid rgba(255, 255, 255, 0.6509803922);
   }
 }
+@-webkit-keyframes scroll {
+  from {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  to {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+}
+@keyframes scroll {
+  from {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  to {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+}
 .navBar {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -463,6 +483,7 @@ h4 {
   border-radius: 5px;
   padding: 1rem;
   position: relative;
+  text-align: center;
 }
 .mainNav:hover {
   border: 1px solid #ffffff;
@@ -555,14 +576,11 @@ section > div {
       -ms-flex-align: center;
           align-items: center;
 }
-#intro .textContainer {
-  width: max(700px, 50%);
-}
 #intro .imageContainer {
-  width: 350px;
+  width: min(80%, 350px);
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  margin: 0 auto;
+  margin: 0 auto 0.5rem auto;
   border-radius: 50%;
   border: 3px solid #f3ca2f;
   overflow: hidden;
@@ -773,6 +791,22 @@ section > div {
   margin: 0;
 }
 
+.seeMore {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  overflow-x: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.seeMore p {
+  -webkit-animation: scroll 5s infinite linear;
+          animation: scroll 5s infinite linear;
+}
+
 .projectCarouselCard {
   -ms-flex-negative: 0;
       flex-shrink: 0;
@@ -824,8 +858,18 @@ section > div {
   overflow: hidden;
   width: 100%;
 }
+.projectCarouselCardContent img {
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+.projectCarouselCardContent img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
 .projectCarouselCardContent .textContainer {
-  width: max(50%, 400px);
+  width: min(90%, 600px);
 }
 
 .projectCarouselCard:nth-child(even) .projectCarouselCardContent {
@@ -901,12 +945,12 @@ section > div {
 @media (max-width: 1000px) {
   .navBar {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-areas: "socials logo menuBars" "slideOutNav slideOutNav slideOutNav";
+    grid-template-columns: 1fr auto auto;
+    gap: 0.5rem;
+    grid-template-areas: "logo socials menuBars" "slideOutNav slideOutNav slideOutNav";
   }
   .navBar .logo {
     grid-area: logo;
-    text-align: center;
   }
   .navBar .socials {
     grid-area: socials;
@@ -960,9 +1004,9 @@ section > div {
   }
   #intro .contentContainer {
     -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
   }
   .projectCarouselCardContent {
     -webkit-box-orient: vertical !important;
