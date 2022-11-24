@@ -1,0 +1,84 @@
+@media (max-width: 1000px) {
+    .navBar {
+        display: grid;
+        grid-template-columns: 1fr auto auto;
+        gap: 0.5rem;
+        grid-template-areas:
+            "logo socials menuBars"
+            "slideOutNav slideOutNav slideOutNav";
+        .logo {
+            grid-area: logo;
+        }
+        .socials {
+            grid-area: socials;
+        }
+        .menuBars {
+            display: block;
+            grid-area: menuBars;
+            i {
+                float: right;
+                cursor: pointer;
+            }
+        }
+        .slideOutNav {
+            grid-area: slideOutNav;
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            z-index: -1;
+        }
+        input[type="checkbox"] {
+            &:checked ~ .slideOutNav {
+                position: relative;
+                .mainNav {
+                    transform: translateY(0);
+                    opacity: 1;
+                    a {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+        .mainNav {
+            transform: translateY(-3rem);
+            opacity: 0;
+            transition: transform 0.5s ease, opacity 0.5s ease;
+            a {
+                opacity: 0;
+                transition: opacity 0.5s 0.4s ease;
+            }
+        }
+        > .mainNav {
+            display: none;
+        }
+    }
+
+    #intro {
+        .contentContainer {
+            flex-direction: column-reverse;
+        }
+        p {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+
+        .projectCarouselCardContent {
+            flex-direction: column !important;
+            > div {
+                margin: 0.5rem;
+            }
+            .imageContainer {
+                width: 50%;
+            }
+        }
+
+        .contactOptions {
+            flex-direction: column;
+            align-items: center;
+            > div {
+                width: 80%;
+                margin: 2rem;
+            }
+        }
+}
