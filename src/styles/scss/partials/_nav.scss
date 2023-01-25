@@ -10,9 +10,11 @@
     transform: translate(-50%, 0);
     background-color: #151516;
     z-index: 100;
+
     * {
         transition: all 0.3s ease-out;
     }
+
     input[type="checkbox"] {
         opacity: 0;
         position: absolute;
@@ -20,14 +22,16 @@
 }
 
 .mainNav {
-    border: 1px solid #ffffffa6;
-    border-radius: 5px;
+    border: 5px solid #ffffffa6;
+    border-radius: 10px;
     padding: 1rem;
     position: relative;
     text-align: center;
+
     &:hover {
-        border: 1px solid #ffffff;
+        border: 5px solid #ffffff;
     }
+
     a {
         padding: 0 1rem;
     }

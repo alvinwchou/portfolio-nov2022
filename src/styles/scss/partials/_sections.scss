@@ -5,7 +5,7 @@ section {
     align-items: center;
 }
 
-section > div {
+section>div {
     display: flex;
     justify-content: space-between;
     width: 95vw;
@@ -20,6 +20,7 @@ section > div {
     position: sticky;
     top: 0;
     max-height: 100vh;
+
     h3 {
         transform: rotate(-90deg);
         white-space: nowrap;
@@ -35,9 +36,11 @@ section > div {
         display: flex;
         align-items: center;
     }
+
     .textContainer {
         // width: max(700px, 50%);
     }
+
     .imageContainer {
         width: min(80%, 350px);
         flex-shrink: 0;
@@ -50,29 +53,34 @@ section > div {
         transform: scale(0.5);
         opacity: 0;
         transition: all 0.5s 0.25s ease-out;
+
         &.isVisible {
             will-change: transform, opacity;
             transform: scale(1);
             opacity: 1;
         }
     }
+
     p {
         will-change: transform, opacity;
         transform: translateX(50%);
         opacity: 0;
         transition: all 1s 0.5s ease-out;
+
         &.isVisible {
             will-change: transform, opacity;
             transform: translateX(0);
             opacity: 1;
         }
     }
+
     h1,
     .line {
         will-change: transform, opacity;
         transform: translateY(100%);
         opacity: 0;
         transition: all 1s 0.5s ease-out;
+
         &.isVisible {
             will-change: transform, opacity;
             transform: translateY(0);
@@ -91,15 +99,19 @@ section > div {
 
 .aboutContainer {
     border: 1px solid white;
+
     svg {
         float: right;
     }
+
     .contentContainer {
         padding: 7rem 0;
+
         .textContainer {
             padding-top: 2rem;
         }
     }
+
     p span {
         text-decoration: underline;
         text-decoration-color: #f3ca2f;
@@ -143,34 +155,42 @@ section > div {
 .ccard1 {
     background: linear-gradient(-229deg, #e34236, #f06529);
 }
+
 .ccard2 {
     animation-delay: -1s;
     background: linear-gradient(-229deg, #264de4, #ffffff);
 }
+
 .ccard3 {
     animation-delay: -2s;
     background: linear-gradient(-229deg, #f8a5c2, #ba68c8);
 }
+
 .ccard4 {
     animation-delay: -3s;
     background: linear-gradient(-229deg, #f0db4f, #323330);
 }
+
 .ccard5 {
     animation-delay: -4s;
     background: linear-gradient(-229deg, #61dbfb, #ffffff);
 }
+
 .ccard6 {
     animation-delay: -5s;
     background: linear-gradient(-229deg, #f1502f, #3e2c00);
 }
+
 .ccard7 {
     animation-delay: -6s;
     background: linear-gradient(-229deg, #211f1f, #000);
 }
+
 .ccard8 {
     animation-delay: -7s;
     background: linear-gradient(-229deg, #ffa611, #ffcb2b);
 }
+
 .ccard9 {
     animation-delay: -8s;
     background: linear-gradient(-229deg, #303030, #3c873a);
@@ -178,10 +198,12 @@ section > div {
 
 #projects {
     background-color: #383838;
+
     .contentContainer {
         margin: 6rem 0;
     }
 }
+
 .myProjects {
     display: flex;
 }
@@ -203,9 +225,15 @@ section > div {
     transform: translateX(50%);
     cursor: pointer;
     z-index: 5;
+
     p {
         margin: 0;
     }
+}
+
+.projectCarouselAllProjects {
+    display: flex;
+    justify-content: center;
 }
 
 .seeMore {
@@ -216,6 +244,7 @@ section > div {
     overflow-x: hidden;
     display: flex;
     white-space: nowrap;
+
     p {
         animation: scroll 5s infinite linear;
     }
@@ -245,27 +274,32 @@ section > div {
     transform: scale(0.8);
     opacity: 0.25;
     transition: all 0.5s ease-out;
+
     &.isVisible {
         will-change: transform, opacity;
         transform: scale(1);
         opacity: 1;
     }
 
-    > div {
+    >div {
         margin: 2rem;
     }
+
     .imageContainer {
         border-radius: 15px;
         overflow: hidden;
         width: 100%;
     }
+
     img {
         transition: all 0.5s ease-out;
         transform: scale(1);
+
         &:hover {
             transform: scale(1.1);
         }
     }
+
     .textContainer {
         width: min(90%, 600px);
     }
@@ -275,19 +309,22 @@ section > div {
     flex-direction: row-reverse;
 }
 
-.projectCarouselCard:nth-child(n + 5) {
-    display: none;
-}
+// .projectCarouselCard:nth-child(n + 5) {
+//     display: none;
+// }
 
 #contact {
     h2 {
         padding: 4rem 0;
     }
+
     i {
         font-size: 3rem;
     }
+
     .button {
         animation: blinking 2s infinite linear;
+
         &:hover {
             animation: none;
             color: #f3ca2f;
@@ -300,7 +337,8 @@ section > div {
     display: flex;
     justify-content: space-between;
     text-align: center;
-    > div {
+
+    >div {
         border: 1px solid #ffffffa6;
         background-color: #383838;
         border-radius: 15px;

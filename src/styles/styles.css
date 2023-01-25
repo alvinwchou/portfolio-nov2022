@@ -262,8 +262,8 @@ img {
   color: rgba(255, 255, 255, 0.6509803922);
   margin-bottom: 1rem;
   display: inline-block;
-  border: 1px solid rgba(255, 255, 255, 0.6509803922);
-  border-radius: 5px;
+  border: 3px solid rgba(255, 255, 255, 0.6509803922);
+  border-radius: 10px;
   padding: 0.5rem 1rem;
   margin: 0 1.5rem 1rem 1.5rem;
   -webkit-transition: all 0.3s ease-out;
@@ -271,7 +271,7 @@ img {
 }
 .button:hover {
   color: #ffffff;
-  border: 1px solid #ffffff;
+  border: 3px solid #ffffff;
 }
 
 body {
@@ -479,14 +479,14 @@ h4 {
 }
 
 .mainNav {
-  border: 1px solid rgba(255, 255, 255, 0.6509803922);
-  border-radius: 5px;
+  border: 5px solid rgba(255, 255, 255, 0.6509803922);
+  border-radius: 10px;
   padding: 1rem;
   position: relative;
   text-align: center;
 }
 .mainNav:hover {
-  border: 1px solid #ffffff;
+  border: 5px solid #ffffff;
 }
 .mainNav a {
   padding: 0 1rem;
@@ -791,6 +791,15 @@ section > div {
   margin: 0;
 }
 
+.projectCarouselAllProjects {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .seeMore {
   position: absolute;
   bottom: 0;
@@ -878,10 +887,6 @@ section > div {
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
-}
-
-.projectCarouselCard:nth-child(n+5) {
-  display: none;
 }
 
 #contact h2 {
